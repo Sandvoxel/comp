@@ -25,7 +25,13 @@
 // This prevents multiple inclusion, which isn't bad for this file but is good practice
 #define MAIN_H_
 
+#define IME_MOTOR 0;
+
+
+
 #include <API.h>
+
+
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
