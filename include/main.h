@@ -25,18 +25,28 @@
 // This prevents multiple inclusion, which isn't bad for this file but is good practice
 #define MAIN_H_
 
-#define IME_MOTOR 0;
 
 
 
 #include <API.h>
 
 
+#define PID_SENSOR_SCALE    1
+
+#define PID_MOTOR_SCALE     -1
+
+#define PID_DRIVE_MAX       127
+#define PID_DRIVE_MIN     (-127)
+
+#define PID_INTEGRAL_LIMIT  50
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+
+Encoder encoder;
 
 // A function prototype looks exactly like its declaration, but with a semicolon instead of
 // actual code. If a function does not match a prototype, compile errors will occur.

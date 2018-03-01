@@ -1,16 +1,5 @@
-/** @file opcontrol.c
- * @brief File for operator control code
- *
- * This file should contain the user operatorControl() function and any functions related to it.
- *
- * Any copyright is dedicated to the Public Domain.
- * http://creativecommons.org/publicdomain/zero/1.0/
- *
- * PROS contains FreeRTOS (http://www.freertos.org) whose source code may be
- * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
- */
-
 #include "main.h"
+#include "PID.h"
 /*
  * Runs the user operator control code. This function will be started in its own task with the
  * default priority and stack size whenever the robot is enabled via the Field Management System
@@ -29,11 +18,12 @@
  * This task should never exit; it should end with some kind of infinite loop, even if empty.
  */
 void operatorControl() {
-	int count;
-	//motorSet(1, 70);
+	TaskHandle memes = taskCreate(pidController, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
+	//setSpeed(10);
+	pidRequestedValue = 300;
 	while (1) {
-		imeGet(0, &count);
-		printf("%d\n", count);
-		delay(750);
+
+
+
 	}
 }
