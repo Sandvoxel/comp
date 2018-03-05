@@ -9,9 +9,7 @@
  * PROS contains FreeRTOS (http://www.freertos.org) whose source code may be
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
-
 #include "main.h"
-
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
@@ -38,7 +36,7 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
-  encoder = encoderInit(1, 2, true);
+
 
 
 

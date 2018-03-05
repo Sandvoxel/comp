@@ -46,7 +46,6 @@ extern "C" {
 #endif
 
 
-Encoder encoder;
 
 // A function prototype looks exactly like its declaration, but with a semicolon instead of
 // actual code. If a function does not match a prototype, compile errors will occur.

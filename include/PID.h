@@ -1,8 +1,8 @@
 #include "main.h"
-#include "math.h"
+#include <math.h>
 
 
-float  pid_Kp = 2.0;
+float  pid_Kp = 100.0;
 float  pid_Ki = 0.04;
 float  pid_Kd = 0.0;
 
